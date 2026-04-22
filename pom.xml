@@ -6,17 +6,17 @@
 
     <groupId>com.vaadin.componentfactory</groupId>
     <artifactId>selection-grid-flow-root</artifactId>
-    <version>4.0.1</version>
+    <version>4.0.1-PATCH</version>
     <packaging>pom</packaging>
     <modules>
         <module>selection-grid-flow</module>
-        <module>selection-grid-flow-demo</module>
+        <!--module>selection-grid-flow-demo</module-->
     </modules>
     <name>selection-grid-flow</name>
     <description>selection-grid-flow</description>
 
     <properties>
-        <vaadin.version>25.0.0</vaadin.version>
+        <vaadin.version>25.0.7</vaadin.version>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

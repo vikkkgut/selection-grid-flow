@@ -25,6 +25,11 @@ customElements.whenDefined("vaadin-selection-grid").then(() => {
             const boundOldClickHandler = oldClickHandler.bind(this);
             boundOldClickHandler(e);
 
+            const tr = e.composedPath().find(p => p.nodeName === 'TR');
+            if (tr && typeof tr.index !== 'undefined' && !this.$.items.contains(tr)) {
+                return;  // TR belongs to a nested grid (e.g. dropdown popup), ignore
+            }            
+
             this._selectionGridSelectRow(e);
         };
         Grid.prototype.old_onNavigationKeyDown = Grid.prototype._onNavigationKeyDown;

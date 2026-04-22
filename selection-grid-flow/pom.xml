@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>selection-grid-flow</artifactId>
-    <version>4.0.1</version>
+    <version>4.0.1-PATCH</version>
 
     <packaging>jar</packaging>
 
