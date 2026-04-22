@@ -25,6 +25,7 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <nexus>https://nexus.tools.dawinci.com/repository</nexus>
     </properties>
 
     <dependencyManagement>
@@ -76,6 +77,17 @@
         </dependency>
 
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>maven-releases</id>
+            <url>${nexus}/maven-sticky/</url>
+        </repository>
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <url>${nexus}/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <build>
         <plugins>
